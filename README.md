@@ -1,6 +1,4 @@
-🧠 Build a Semantic Book Recommender with LLMs – Full Course
-This repository contains the complete source code for the freeCodeCamp course titled “Build a Semantic Book Recommender with LLMs – Full Course.”
-The project demonstrates how to build a semantic search and recommendation system for books using Large Language Models (LLMs) and vector databases.
+🧠 Build a Semantic Book Recommender 
 
 🧩 Project Components
 This tutorial is divided into five main components:
