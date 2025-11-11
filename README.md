@@ -1,30 +1,32 @@
-🧠 Build a Semantic Book Recommender 
+# 🧠 Semantic Book Recommender
 
-🧩 Project Components
-This tutorial is divided into five main components:
-1. Text Data Cleaning
-File: data-exploration.ipynb
-Preprocess and clean raw text data to prepare it for embedding and analysis.
+A compact tutorial and example project that walks through building an end-to-end semantic book recommender using embeddings, vector search, zero-shot classification, sentiment analysis, and a Gradio dashboard.
 
-2. Semantic (Vector) Search and Database Construction
-File: vector-search.ipynb
-Build a vector database to perform semantic search, allowing users to find books based on natural language queries (e.g., "a story about revenge").
+## Project components
 
-3. Text Classification (Zero-Shot Learning)
-File: text-classification.ipynb
-Classify books into “fiction” or “non-fiction” categories using LLM zero-shot classification, enabling users to filter books by type.
+This tutorial is divided into five main components (files included in this repository):
 
-4.Sentiment Analysis
-File: sentiment-analysis.ipynb
-Use LLMs to analyze sentiment and emotional tone (e.g., joyful, suspenseful, sad), allowing books to be sorted by mood or atmosphere.
+1. Text Data Cleaning — `data-exploration.ipynb`
+   - Preprocess and clean raw text data to prepare it for embedding and analysis.
+2. Semantic (Vector) Search and Database Construction — `vector-search.ipynb`
+   - Build a vector database to perform semantic search (e.g., query: "a story about revenge").
+3. Text Classification (Zero-Shot Learning) — `text-classification.ipynb`
+   - Classify books into `fiction` or `non-fiction` using LLM zero-shot classification.
+4. Sentiment Analysis — `sentiment-analysis.ipynb`
+   - Analyze sentiment and emotional tone (joyful, suspenseful, sad) with LLMs.
+5. Web Application (Gradio Dashboard) — `gradio-dashboard.py`
+   - Interactive interface for recommendations, visualization, and exploration.
 
-5.Web Application (Gradio Dashboard)
-File: gradio-dashboard.py
-Build an interactive Gradio interface for users to get book recommendations, visualize data, and explore results.
+## Requirements
 
-⚙️ Requirements
-This project was developed using Python 3.11.
-You’ll need to install the following dependencies before running the project:
+Tested with Python 3.11. Install dependencies from the bundled file:
+
+```powershell
+pip install -r requirements.txt
+```
+
+Common dependencies include:
+
 - kagglehub
 - pandas
 - matplotlib
@@ -37,28 +39,51 @@ You’ll need to install the following dependencies before running the project:
 - gradio
 - notebook
 - ipywidgets
-A complete list of dependencies is provided in the requirements.txt file included in this repository.
 
-🔑 Setup Instructions
-1. Clone the repository
-https://github.com/letronghieubkhn-droid/book-recommender.git
+## Setup
 
-2. Install dependencies
-pip install -r requirements.txt
+1. Clone the repository:
 
-3. Create a .env file in the root directory and add your OpenAI API key
+```powershell
+git clone https://github.com/letronghieubkhn-droid/book-recommender.git
+cd book-recommender\llm-semantic-book-recommender
+```
+
+2. Create and populate a `.env` file in the project root with your OpenAI key:
+
+```
 OPENAI_API_KEY=your_api_key_here
+```
 
-4. Follow the course instructions
-Use the provided notebooks to build, index, and query your vector database.
+3. Install Python dependencies (see Requirements section):
 
-📊 Data Source
-The dataset for this project is available on Kaggle.
-Instructions for downloading and loading the data are provided in the tutorial and repository documentation.
+```powershell
+pip install -r requirements.txt
+```
 
-🚀 Key Features
-- End-to-end semantic search and recommendation system using LLMs
-- Zero-shot classification — no manual labeling required
-- Built-in sentiment and emotion analysis
-- Interactive Gradio dashboard for book exploration
-- Modular and well-documented Jupyter notebooks for each step
+4. Follow the notebooks in order: start with `data-exploration.ipynb`, then `vector-search.ipynb`, `text-classification.ipynb`, `sentiment-analysis.ipynb`. The `gradio-dashboard.py` script provides a simple web UI.
+
+## Data
+
+The dataset used in this tutorial is available on Kaggle. See the notebooks for instructions on how to download and load the dataset.
+
+## How to run the Gradio dashboard (quick)
+
+After preparing data and embeddings, run the dashboard:
+
+```powershell
+python gradio-dashboard.py
+```
+
+Open the provided local URL in your browser to interact with the recommender.
+
+## Key features
+
+- End-to-end semantic search and recommendation using embeddings
+- Zero-shot classification (no manual labels required)
+- Sentiment and emotion analysis
+- Interactive Gradio dashboard for exploration
+- Modular notebooks for each step of the pipeline
+
+
+
